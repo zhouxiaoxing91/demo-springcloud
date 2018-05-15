@@ -1,0 +1,17 @@
+server:
+  port: 8771
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  server:
+    evictionIntervalTimerInMs: 500000
+  instance:
+    hostname: two
+    leaseExpirationDurationInSeconds: 100
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://one:8761/eureka/,http://three:8781/eureka/
